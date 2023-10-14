@@ -43,7 +43,7 @@ function YTLoader() {
                 setLoading(true);
 
                 // Fetch video details from server and pass data onto the downloads page - change url to own server
-                fetch(`https://ytloader-backend-production-4ba1.up.railway.app/video?URL=${userInput}`, {headers:{"Content-Type": "application/json"}})
+                fetch(`https://ytloader-backend-production-fb4c.up.railway.app/video?URL=${userInput}`, {headers:{"Content-Type": "application/json"}})
                 .then((resp) => {return resp.json()})
                 .then((data) => {navigate('/download', {state: JSON.stringify(data)})})
                 .catch((error) => {
